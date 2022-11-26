@@ -1,4 +1,4 @@
-package frank.antoniak.sfgpetclinic;
+package spring.learning.sfgpetclinic;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
