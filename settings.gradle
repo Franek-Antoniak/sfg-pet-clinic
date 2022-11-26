@@ -1,1 +1,4 @@
-rootProject.name = 'sfg-pet-clinic'
+rootProject.name = 'pet-clinic'
+include 'pet-clinic-data'
+include 'pet-clinic-web'
+
