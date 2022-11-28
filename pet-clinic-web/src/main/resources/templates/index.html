@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{fragments/layout :: layout (~{::body}, 'home')}" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Pet Clinic Index</title>
+</head>
+<body>
+<h2 th:text="#{welcome}">Welcome</h2>
+<div class="row">
+    <div class="col-md-12">
+        <img alt="pets" class="img-responsive" src="images/pets.png" th:src="@{resources/images/pets.png}"/>
+    </div>
+</div>
+</body>
+</html>

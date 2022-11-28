@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" th:replace="~{fragments/layout :: layout (~{::body}, 'vets')}" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>List of Vets</title>
+</head>
+<body>
+<!--/*@thymesVar id="vet" type="spring.learning.petclinic.model.Vet"*/-->
+<h2>Veterinarians</h2>
+
+<table class="table table-striped" id="vets">
+    <thead>
+    <tr>
+        <th>Name</th>
+        <th>Specialties</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="vet : ${vets}">
+        <td th:text="${vet.firstName + ' ' + vet.lastName}"></td>
+        <td><span th:each="specialty : ${vet.specialities}"
+                  th:text="${specialty.description + ' '}"/> <span
+                th:if="${vet?.specialities?.size() == 0}">none</span></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
