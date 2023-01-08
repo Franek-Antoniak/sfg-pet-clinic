@@ -1,0 +1,1 @@
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/Franek-Antoniak/sfg-pet-clinic/tree/master.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/Franek-Antoniak/sfg-pet-clinic/tree/master)
