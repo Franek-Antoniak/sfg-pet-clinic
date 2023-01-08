@@ -19,21 +19,21 @@ class IndexControllerTest {
 	@Test
 	void index() throws Exception {
 		MockMvc mockMvc = MockMvcBuilders.standaloneSetup(controller)
-		                                 .build();
+				.build();
 
 		mockMvc.perform(get("/"))
-		       .andExpect(status().isOk())
-		       .andExpect(view().name("index"));
+				.andExpect(status().isOk())
+				.andExpect(view().name("index"));
 	}
 
 	@Test
 	void oupsHendler() throws Exception {
 		MockMvc mockMvc = MockMvcBuilders.standaloneSetup(controller)
-		                                 .build();
+				.build();
 
 		mockMvc.perform(get("/oups"))
-		       .andExpect(status().isNotImplemented())
-		       .andExpect(view().name("notimplemented"));
+				.andExpect(status().isNotImplemented())
+				.andExpect(view().name("notimplemented"));
 	}
 
 }

@@ -21,8 +21,8 @@ class PetMapServiceTest {
 		petMapService = new PetMapService();
 
 		petMapService.save(Pet.builder()
-		                      .id(petId)
-		                      .build());
+				.id(petId)
+				.build());
 	}
 
 	@Test
@@ -63,8 +63,8 @@ class PetMapServiceTest {
 		Long id = 2L;
 
 		Pet pet2 = Pet.builder()
-		              .id(id)
-		              .build();
+				.id(id)
+				.build();
 
 		Pet savedPet = petMapService.save(pet2);
 
@@ -77,26 +77,26 @@ class PetMapServiceTest {
 		Long id = 1L;
 
 		Pet pet2 = Pet.builder()
-		              .id(id)
-		              .build();
+				.id(id)
+				.build();
 
 		Pet savedPet = petMapService.save(pet2);
 
 		assertEquals(id, savedPet.getId());
 		assertEquals(1, petMapService.findAll()
-		                             .size());
+				.size());
 	}
 
 	@Test
 	void saveNoId() {
 
 		Pet savedPet = petMapService.save(Pet.builder()
-		                                     .build());
+				.build());
 
 		assertNotNull(savedPet);
 		assertNotNull(savedPet.getId());
 		assertEquals(2, petMapService.findAll()
-		                             .size());
+				.size());
 	}
 
 	@Test
@@ -105,7 +105,7 @@ class PetMapServiceTest {
 		petMapService.delete(petMapService.findById(petId));
 
 		assertEquals(0, petMapService.findAll()
-		                             .size());
+				.size());
 
 	}
 
@@ -113,25 +113,25 @@ class PetMapServiceTest {
 	void deleteWithWrongId() {
 
 		Pet pet = Pet.builder()
-		             .id(5L)
-		             .build();
+				.id(5L)
+				.build();
 
 		petMapService.delete(pet);
 
 		assertEquals(1, petMapService.findAll()
-		                             .size());
+				.size());
 	}
 
 	@Test
 	void deleteWithNullId() {
 
 		Pet pet = Pet.builder()
-		             .build();
+				.build();
 
 		petMapService.delete(pet);
 
 		assertEquals(1, petMapService.findAll()
-		                             .size());
+				.size());
 	}
 
 	@Test
@@ -140,7 +140,7 @@ class PetMapServiceTest {
 		petMapService.delete(null);
 
 		assertEquals(1, petMapService.findAll()
-		                             .size());
+				.size());
 
 	}
 
@@ -150,7 +150,7 @@ class PetMapServiceTest {
 		petMapService.deleteById(petId);
 
 		assertEquals(0, petMapService.findAll()
-		                             .size());
+				.size());
 	}
 
 	@Test
@@ -159,7 +159,7 @@ class PetMapServiceTest {
 		petMapService.deleteById(5L);
 
 		assertEquals(1, petMapService.findAll()
-		                             .size());
+				.size());
 	}
 
 	@Test
@@ -168,6 +168,6 @@ class PetMapServiceTest {
 		petMapService.deleteById(null);
 
 		assertEquals(1, petMapService.findAll()
-		                             .size());
+				.size());
 	}
 }

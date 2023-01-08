@@ -8,7 +8,14 @@ import static org.springframework.http.HttpStatus.NOT_IMPLEMENTED;
 
 @Controller
 public class IndexController {
-	@RequestMapping({"", "/", "index", "index.html"})
+	@RequestMapping(
+			{
+					"",
+					"/",
+					"index",
+					"index.html"
+			}
+	)
 	public String index() {
 		return "index";
 	}

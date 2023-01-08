@@ -24,14 +24,14 @@ public class PetTypeSDJpaService implements PetTypeService {
 	public Set<PetType> findAll() {
 		Set<PetType> petTypes = new HashSet<>();
 		petTypeRepository.findAll()
-		                 .forEach(petTypes::add);
+				.forEach(petTypes::add);
 		return petTypes;
 	}
 
 	@Override
 	public PetType findById(Long aLong) {
 		return petTypeRepository.findById(aLong)
-		                        .orElse(null);
+				.orElse(null);
 	}
 
 	@Override

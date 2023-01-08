@@ -23,14 +23,14 @@ public class VetSDJpaService implements VetService {
 	public Set<Vet> findAll() {
 		Set<Vet> vets = new HashSet<>();
 		vetRepository.findAll()
-		             .forEach(vets::add);
+				.forEach(vets::add);
 		return vets;
 	}
 
 	@Override
 	public Vet findById(Long aLong) {
 		return vetRepository.findById(aLong)
-		                    .orElse(null);
+				.orElse(null);
 	}
 
 	@Override

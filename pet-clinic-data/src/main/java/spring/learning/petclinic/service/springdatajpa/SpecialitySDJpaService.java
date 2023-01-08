@@ -22,14 +22,14 @@ public class SpecialitySDJpaService implements SpecialtyService {
 	public Set<Speciality> findAll() {
 		Set<Speciality> specialities = new HashSet<>();
 		specialtyRepository.findAll()
-		                   .forEach(specialities::add);
+				.forEach(specialities::add);
 		return specialities;
 	}
 
 	@Override
 	public Speciality findById(Long aLong) {
 		return specialtyRepository.findById(aLong)
-		                          .orElse(null);
+				.orElse(null);
 	}
 
 	@Override

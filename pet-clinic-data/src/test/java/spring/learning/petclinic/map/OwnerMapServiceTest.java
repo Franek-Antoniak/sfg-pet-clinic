@@ -22,9 +22,9 @@ class OwnerMapServiceTest {
 		ownerMapService = new OwnerMapService(new PetTypeMapService(), new PetMapService());
 
 		ownerMapService.save(Owner.builder()
-		                          .id(ownerId)
-		                          .lastName(lastName)
-		                          .build());
+				.id(ownerId)
+				.lastName(lastName)
+				.build());
 	}
 
 	@Test
@@ -46,8 +46,8 @@ class OwnerMapServiceTest {
 		Long id = 2L;
 
 		Owner owner2 = Owner.builder()
-		                    .id(id)
-		                    .build();
+				.id(id)
+				.build();
 
 		Owner savedOwner = ownerMapService.save(owner2);
 
@@ -59,7 +59,7 @@ class OwnerMapServiceTest {
 	void saveNoId() {
 
 		Owner savedOwner = ownerMapService.save(Owner.builder()
-		                                             .build());
+				.build());
 
 		assertNotNull(savedOwner);
 		assertNotNull(savedOwner.getId());
@@ -70,7 +70,7 @@ class OwnerMapServiceTest {
 		ownerMapService.delete(ownerMapService.findById(ownerId));
 
 		assertEquals(0, ownerMapService.findAll()
-		                               .size());
+				.size());
 	}
 
 	@Test
@@ -78,7 +78,7 @@ class OwnerMapServiceTest {
 		ownerMapService.deleteById(ownerId);
 
 		assertEquals(0, ownerMapService.findAll()
-		                               .size());
+				.size());
 	}
 
 	@Test

@@ -9,7 +9,12 @@ import spring.learning.petclinic.service.SpecialtyService;
 import java.util.Set;
 
 @Service
-@Profile({"default", "map"})
+@Profile(
+		{
+				"default",
+				"map"
+		}
+)
 public class SpecialityMapService extends AbstractMapService<Speciality, Long> implements SpecialtyService {
 
 	@Override
